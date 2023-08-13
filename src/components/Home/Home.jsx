@@ -37,12 +37,12 @@ function Home({ cl, setCl, handleCl }) {
   return (
     <div className="all-home flex flex-col items-center justify-center">
       <div className="header-home w-[1440px] h-[131px] bg-slate-500 ">
-        <div className="title-home">Liên Minh Huyền Thoại</div>
+        <div className="title-home flex justify-center text-center "><p className="text-[40px] pt-8 font-extrabold text-gray-800">League of Legend Champions</p></div>
       </div>
 
       <div className="search-home h-[50px] w-[350px] my-[68px] flex justify-center items-center ">
         <input
-          className="input-home w-[90%] h-[90%] bg-slate-500  "  
+          className="input-home w-[90%] h-[90%] bg-slate-500 pl-2 rounded-lg text-zinc-800"  
           type="text"
           placeholder="Tìm theo tên tướng"
           value={searchValue}

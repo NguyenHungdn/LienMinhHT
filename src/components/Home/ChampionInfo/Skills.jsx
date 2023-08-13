@@ -29,21 +29,21 @@ const Skills = (props) => {
     setSelectedSkill(index);
   };
   return (
-    <div className="container">
-      <div className="top-section">
+    <div className="container flex flex-col w-[1024px]">
+      <div className="top-section flex justify-around mb-[30px]">
         {skillImg.map((img, index) => (
           <span
             key={index}
-            className={`skill-img ${selectedSkill === index ? "selected" : ""}`}
+            className={`skill-img h-[150px] w-[150px]  ${selectedSkill === index ? "selected" : ""}`}
             onClick={() => handleSkillClick(index)}
           >
-            <img src={img} alt={`skill ${index}`} />
+            <img className=" w-full " src={img} alt={`skill ${index}`} />
           </span>
         ))}
       </div>
-      <div className="skill-name"> Name: {skillName[selectedSkill]} </div>
+      <div className="skill-name mb-[30px]"> Name :{skillName[selectedSkill]} </div>
       <div className="bottom-section">
-        <div className="skill-content">
+        <div className="skill-content mb-[30px] h-[60px] ">
           <p>{skillData[selectedSkill]}</p>
         </div>
       </div>
