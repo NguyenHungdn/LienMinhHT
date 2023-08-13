@@ -79,9 +79,10 @@ function Home({ cl, setCl, handleCl }) {
             </div>
           ))
         ) : (
-          <div> </div>
+          <div className="h-[100vh] bg-slate-500"> </div>
         )}
       </div>
+      <div className="bg-slate-500 h-[68vh]"></div>
     </div>
   );
 }

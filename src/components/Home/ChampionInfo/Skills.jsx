@@ -43,7 +43,7 @@ const Skills = (props) => {
       </div>
       <div className="skill-name mb-[30px]"> Name :{skillName[selectedSkill]} </div>
       <div className="bottom-section">
-        <div className="skill-content mb-[30px] h-[60px] ">
+        <div className="skill-content mb-[30px] h-[90px] ">
           <p>{skillData[selectedSkill]}</p>
         </div>
       </div>
