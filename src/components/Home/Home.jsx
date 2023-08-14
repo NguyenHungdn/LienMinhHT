@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home({ cl, setCl, handleCl }) {
   const [champions, setChampions] = useState(null);
@@ -35,14 +35,18 @@ function Home({ cl, setCl, handleCl }) {
     });
 
   return (
-    <div className="all-home flex flex-col items-center justify-center">
-      <div className="header-home w-[1440px] h-[131px] bg-slate-500 ">
-        <div className="title-home flex justify-center text-center "><p className="text-[40px] pt-8 font-extrabold text-gray-800">League of Legend Champions</p></div>
+    <div className="all-home bg-slate-800 flex flex-col items-center justify-center mx-[auto] ">
+      <div className="header-home w-full h-[131px] bg-slate-500 ">
+        <div className="title-home flex justify-center text-center ">
+          <p className="text-[30px] pt-8 font-extrabold text-gray-800">
+            League of Legend Champions
+          </p>
+        </div>
       </div>
 
       <div className="search-home h-[50px] w-[350px] my-[68px] flex justify-center items-center ">
         <input
-          className="input-home w-[90%] h-[90%] bg-slate-500 pl-2 rounded-lg text-zinc-800"  
+          className="input-home w-[90%] h-[90%] bg-slate-500 pl-2 rounded-lg text-zinc-800"
           type="text"
           placeholder="Tìm theo tên tướng"
           value={searchValue}
@@ -50,7 +54,7 @@ function Home({ cl, setCl, handleCl }) {
         />
       </div>
 
-      <div className="cham-box-home w-[1440px] flex flex-wrap gap-[46px] items-center px-[204px] text-white   " >
+      <div className="cham-box-home md:w-[100%] xl:w-[80%] lg:w-[70%]  flex flex-wrap gap-[40px] items-center justify-center  text-white   ">
         {champions ? (
           filteredChampions.map((champion) => (
             <div
@@ -65,7 +69,10 @@ function Home({ cl, setCl, handleCl }) {
               />
               <div className="mark absolute bottom-0 bg-black opacity-60 bg w-full h-[147px] rounded-xl "></div>
               <div className="cham-info absolute bottom-0 bg-transparent bg w-full h-[147px] rounded-xl ">
-                <div className="cham-name absolute top-[30px] left-[26px] text-white text-[20px] font-semibold tracking-wider "> {champion.id} </div>
+                <div className="cham-name absolute top-[30px] left-[26px] text-white text-[20px] font-semibold tracking-wider ">
+                  {" "}
+                  {champion.id}{" "}
+                </div>
                 <div className="cham-role">
                   <div>
                     {champion.tags.slice(0, 2).map((tag, index) => (
