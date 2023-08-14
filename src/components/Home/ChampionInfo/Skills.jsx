@@ -34,10 +34,10 @@ const Skills = (props) => {
         {skillImg.map((img, index) => (
           <span
             key={index}
-            className={`skill-img xl:h-[150px] xl:w-[150px] lg:h-[120px] sm:h-[80px]  ${selectedSkill === index ? "selected" : ""}`}
+            className={`skill-img xl:h-[150px] xl:w-[150px] lg:h-[120px] sm:h-[80px] cursor-pointer hover:scale-125 ${selectedSkill === index ? "selected" : ""}`}
             onClick={() => handleSkillClick(index)}
           >
-            <img className=" w-full " src={img} alt={`skill ${index}`} />
+            <img className=" w-full  rounded-md" src={img} alt={`skill ${index}`} />
           </span>
         ))}
       </div>

@@ -82,9 +82,9 @@ function ChampionInfo() {
               <div className="list-skins flex flex-col  mb-[30px] w-[480px] sm:w-[600px] md:w-[720px] xl:w-[1024px] h-[180px] flex-wrap overflow-auto">
                 {championData[id].skins.map((data, index) => {
                   return (
-                    <div className="skin-container relative h-[150px]  " key={data.num}>
+                    <div className="skin-container relative h-[150px] cursor-pointer  " key={data.num}>
                       <img
-                        className="skins h-[150px]"
+                        className="skins h-[150px] rounded-md "
                         src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${data.num}.jpg`}
                         alt={data.name}
                         onClick={() => handleSkinClick(index)}
@@ -98,7 +98,7 @@ function ChampionInfo() {
                 <div className="modal w-[480px] sm:w-[600px] md:w-[720px] xl:w-[1024px]">
                   <div className="modal-content ">
                     <img
-                      className="full-skin"
+                      className="full-skin hover:scale-[1.8] "
                       src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${championData[id].skins[selectedSkin].num}.jpg`}
                       alt={championData[id].skins[selectedSkin].name}
                     />
