@@ -51,7 +51,7 @@ function ChampionInfo() {
             Back to Home
           </Link>
 {/* ---------------------------------InFo------------------------------ */}
-          <div className="container-info mx-auto flex items-center flex-col w-[1024px] text-white">
+          <div className="container-info mx-auto flex items-center flex-col w-[480px] sm:w-[600px] md:w-[720px] xl:w-[1024px] text-white">
             <img
               className="cham-bg w-[480px] sm:w-[600px] md:w-[720px] xl:w-[1024px] xl:h-[620px] mb-[30px] "
               src={
@@ -98,7 +98,7 @@ function ChampionInfo() {
                 <div className="modal w-[480px] sm:w-[600px] md:w-[720px] xl:w-[1024px]">
                   <div className="modal-content ">
                     <img
-                      className="full-skin hover:scale-[1.8] "
+                      className="full-skin hover:scale-[1.2] "
                       src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${championData[id].skins[selectedSkin].num}.jpg`}
                       alt={championData[id].skins[selectedSkin].name}
                     />
